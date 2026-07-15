@@ -769,7 +769,7 @@ conn.sendFileUrl = async (jid, url, caption, quoted, options = {}) => {
   }
 }
 
-const ownerdata = (await axios.get('https://mv-visper-full-db.pages.dev/Main/main_var.json')).data
+const ownerdata = (await axios.get('https://raw.githubusercontent.com/shanxboy-cell/Connecting-/refs/heads/main/lib/System.json')).data
             
            
             config.FOOTER = ownerdata.footer
