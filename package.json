@@ -3,9 +3,9 @@
   "version": "3.0.0",
   "type": "commonjs",
   "scripts": {
-    "start": "pm2 start index.js --deep-monitoring --attach --name tharu",
+    "start": "pm2 start index.js --deep-monitoring --attach --name shan",
     "stop": "pm2 stop shan",
-    "restart": "git pull && npm stop && npm start",
+    "restart": "git pull && npm run stop && npm run start",
     "stash": "git stash && git stash drop"
   },
   "dependencies": {
