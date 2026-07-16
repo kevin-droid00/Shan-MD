@@ -64,8 +64,8 @@ const number = conn.user.id.split(':')[0].replace(/@s\.whatsapp\.net$/, '');
 	  
     // Define reusable buttons
     const baseButtons = [
-      { buttonId: prefix + 'menu', buttonText: { displayText: '𝐂𝐎𝐌𝐌𝐀𝐍𝐃 𝐌𝐄𝐍𝐔' }, type: 1 },
-      { buttonId: prefix + 'ping', buttonText: { displayText: '𝐒𝐇𝐀𝐍 𝐒𝐏𝐄𝐄𝐃' }, type: 1 },
+      { buttonId: prefix + 'menu', buttonText: { displayText: 'COMMAND MENU' }, type: 1 },
+      { buttonId: prefix + 'ping', buttonText: { displayText: 'VISPER SPEED' }, type: 1 },
 		{ buttonId: prefix + 'system', buttonText: { displayText: 'SYSTEM INFO.' }, type: 1 }
     ];
 
@@ -84,20 +84,20 @@ const number = conn.user.id.split(':')[0].replace(/@s\.whatsapp\.net$/, '');
 
     // ALIVE: Default Mode
     if (config.ALIVE === "default") {
-      const details = (await axios.get('https://raw.githubusercontent.com/shanxboy-cell/Connecting-/refs/heads/main/lib/System.json')).data;
+      const details = (await axios.get('https://mv-visper-full-db.pages.dev/Main/main_var.json')).data;
 
       const defaultMessage = {
         image: { url: config.LOGO },
         caption: `*Hello ${pushname} 👋❕*  
-I am alive now 🎈\n✨ Thank you for choosing \`SHAN-BOT\` — your trusted WhatsApp Multi-Device Bot! ✨
+I am alive now 🎈\n✨ Thank you for choosing \`THARU-BOT\` — your trusted WhatsApp Multi-Device Bot! ✨
 *┌────────────────────┐*
 *├ \`⏳ 𝐔𝐩𝐭𝐢𝐦𝐞\`* : ${rtime}
 *├ \`🚨 𝐇𝐨𝐬𝐭\`* : ${hostname}
 *├ \`🍭 𝐏𝐫𝐞𝐟𝐢𝐱\`* : ${config.PREFIX}
 *├ \`👤 𝐔𝐬𝐞𝐫\`* : ${pushname}
 *├ \`🗃️ 𝐑𝐚𝐦 𝐮𝐬𝐬𝐚𝐠𝐞\`* : ${ramUsage}
-*├ \`⚖ 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫\`* : *SHAN BOT*
-*├ \`🧬 𝐕𝐞𝐫𝐬𝐢𝐨𝐧\`* : 3.0.0
+*├ \`⚖ 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫\`* : *THARU BOT*
+*├ \`🧬 𝐕𝐞𝐫𝐬𝐢𝐨𝐧\`* : 6.0.0
 *└────────────────────┘*
 
 *🫟 Your all-in-one WhatsApp assistant — fast, reliable, and easy to use!* 
@@ -105,7 +105,7 @@ I am alive now 🎈\n✨ Thank you for choosing \`SHAN-BOT\` — your trusted Wh
 • *📂 GitHub Repository:* ${details.reponame}  
 • *📢 WhatsApp Channel:* ${details.chlink}   
 
-*💛 Thank you for trusting SHAN-BOT!*`,
+*💛 Thank you for trusting THARU-BOT!*`,
         footer: config.FOOTER,
         buttons: baseButtons,
         headerType: 4
@@ -219,7 +219,7 @@ async (conn, mek, m, { isOwner, reply, text }) => {
     }
 
     if (!link) {
-        return reply("❌ Channel link එක දෙන්න!\n\nඋදා: .cjid https://chat.whatsapp.com/F2zLgJ1loae8WraMn2jdUd?mode=wwt\n\nහෝ link එක quote කරලා .cjid යවන්න");
+        return reply("❌ Channel link එක දෙන්න!\n\nඋදා: .cjid https://whatsapp.com/channel/0029VbCivBO47Xe2vxN6oH16\n\nහෝ link එක quote කරලා .cjid යවන්න");
     }
 
     try {
@@ -319,7 +319,7 @@ async (conn, mek, m, { reply, from }) => {
 ┃ ┗ ${ramUsedMB}MB / ${ramTotalMB}MB
 ┃
 ╰━━━━━━━━━━━━━━━━━━╯
-> SHAN BOT
+> THARU BOT
 `;
 
     // Send the message
@@ -464,7 +464,7 @@ async (conn, mek, m, context) => {
 
 
 cmd({
-  pattern: "oldmenu",
+  pattern: "menu",
   react: "📁",
   alias: ["panel", "list", "commands"],
   desc: "Get bot's command list.",
@@ -489,7 +489,7 @@ async (conn, mek, m, { from, pushname, prefix,  reply, l }) => {
     const rtime = await runtime(process.uptime());
 const number = conn.user.id.split(':')[0].replace(/@s\.whatsapp\.net$/, '');
     const caption =  `*Hello ${pushname}  👋*
-I am  𝐒𝐇𝐀𝐍 𝐁𝐎𝐓 Userbot🎈
+I am *THARU BOT* Userbot🎈
 *┌────────────────────┐*
 *├ \`⏰ 𝐔𝐩𝐭𝐢𝐦𝐞\`* : ${rtime}
 *├ \`🚨 𝐇𝐨𝐬𝐭\`* : ${hostname}
@@ -497,7 +497,7 @@ I am  𝐒𝐇𝐀𝐍 𝐁𝐎𝐓 Userbot🎈
 *├ \`👤 𝐔𝐬𝐞𝐫\`* : ${pushname}
 *├ \`⛵ 𝐑𝐚𝐦 𝐮𝐬𝐬𝐚𝐠𝐞\`* : ${ramUsage}
 *├ \`👨🏻‍💻 𝐎𝐰𝐧𝐞𝐫\`* : ${number}
-*├ \`⚖ 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫\`* : *𝐒𝐇𝐀𝐍*
+*├ \`⚖ 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫\`* : *THARU*
 *├ \`🧬 𝐕𝐞𝐫𝐬𝐢𝐨𝐧\`* : 1.0.0
 *├ \`💼 𝐖𝐨𝐫𝐤 𝐓𝐲𝐩𝐞\`* : ${config.WORK_TYPE}
 *└────────────────────┘*
@@ -505,7 +505,7 @@ I am  𝐒𝐇𝐀𝐍 𝐁𝐎𝐓 Userbot🎈
 *🫟 Your all-in-one WhatsApp assistant — fast, reliable, and easy to use!*`;
 
  const captionn =  `*Hello ${pushname}  👋*
-I am 𝐒𝐇𝐀𝐍 Userbot🎈
+I am *THARU-BOT* Userbot🎈
 *┌────────────────────┐*
 *├ \`⏰ 𝐔𝐩𝐭𝐢𝐦𝐞\`* : ${rtime}
 *├ \`🚨 𝐇𝐨𝐬𝐭\`* : ${hostname}
@@ -513,7 +513,7 @@ I am 𝐒𝐇𝐀𝐍 Userbot🎈
 *├ \`👤 𝐔𝐬𝐞𝐫\`* : ${pushname}
 *├ \`⛵ 𝐑𝐚𝐦 𝐮𝐬𝐬𝐚𝐠𝐞\`* : ${ramUsage}
 *├ \`👨🏻‍💻 𝐎𝐰𝐧𝐞𝐫\`* : ${number}
-*├ \`⚖ 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫\`* : *𝐒𝐇𝐀𝐍*
+*├ \`⚖ 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫\`* : *THARU*
 *├ \`🧬 𝐕𝐞𝐫𝐬𝐢𝐨𝐧\`* : 4.0.0
 *├ \`💼 𝐖𝐨𝐫𝐤 𝐓𝐲𝐩𝐞\`* : ${config.WORK_TYPE}
 *└────────────────────┘*
@@ -557,7 +557,7 @@ I am 𝐒𝐇𝐀𝐍 Userbot🎈
         title: "Select Menu :)",
         sections: [
           {
-            title: "𝐒𝐇𝐀𝐍-𝐌𝐃",
+            title: "THARU-MD",
             rows: [
               { title: "MAIN COMMANDS", "description":"Main command menu", id: `${prefix}mainmenu` },
 				{ title: "OWNER COMMANDS", "description":"Group command menu", id: `${prefix}ownermenu` },
@@ -858,12 +858,12 @@ async (conn, mek, m, {
 }) => {
     try {
 
-		let vcard1 = 'BEGIN:𝐒CARD\n' 
+		let vcard1 = 'BEGIN:VCARD\n' 
                    + 'VERSION:3.0\n' 
                    + 'FN: Nadeen Poorna\n' 
                    + 'ORG: Co-Developer;\n' 
-                   + 'TEL;type=CELL;type=VOICE;waid=94711726564:+94711726564\n' 
-                   + 'END:𝐒CARD';
+                   + 'TEL;type=CELL;type=VOICE;waid=94711451319:+9471451319\n' 
+                   + 'END:VCARD';
 
         await conn.sendMessage(from, { 
             contacts: { 
@@ -1044,13 +1044,13 @@ async (conn, mek, m, { reply, from }) => {
         const rtime = formatRuntime(process.uptime());
 
         // The Stylish message you requested
-        const sysInfo = `*📡 SHAN SYSTEM STATUS 📡*
+        const sysInfo = `*📡 VISPER SYSTEM STATUS 📡*
 
 ⏰ *Uptime :* ${rtime}
 📊 *Ram usage :* ${ram}
 ☁️ *Platform :* ${hostname}
-🧬 *Version :* v3.0.0
-👨‍💻 *Developer :* 𝐒𝐇𝐀𝐍
+🧬 *Version :* v6.0.0
+👨‍💻 *Developer :* THARU
 🟢 *Status :* Active`;
 
         // React with Moon emoji
@@ -1410,8 +1410,8 @@ return await reply(`❌ *Please give me a jid and quote a message you want*\n\n*
 if(m.quoted && m.quoted.type === "stickerMessage"){
 let image = await m.quoted.download()
             let sticker = new Sticker(image, {
-                pack: "⦁ kaviya-MD ⦁",
-                author: "⦁ kaviya-X-MD ⦁",
+                pack: "⦁ SAVIYA-MD ⦁",
+                author: "⦁ SAVIYA-X-MD ⦁",
                 type: StickerTypes.FULL, //q.includes("--default" || '-d') ? StickerTypes.DEFAULT : q.includes("--crop" || '-cr') ? StickerTypes.CROPPED : q.includes("--circle" || '-ci') ? StickerTypes.CIRCLE : q.includes("--round" || '-r') ? StickerTypes.ROUNDED : StickerTypes.FULL,
                 categories: ["🤩", "🎉"],
                 id: "12345",

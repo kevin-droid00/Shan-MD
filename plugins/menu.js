@@ -81,7 +81,7 @@ cmd({
 
         // config.logo එකේ තියෙන පින්තූරය පාවිච්චි කරයි. එය නැතිනම් default පින්තූරය පාවිච්චි කරයි.
         await conn.sendMessage(from, { 
-            image: { url: config.logo ? config.logo : "https://files.catbox.moe/nsv9gv.jpg" }, 
+            image: { url: config.logo ? config.logo : "https://files.catbox.moe/f5n28q.jpg" }, 
             caption: menuMsg 
         }, { quoted: mek });
 
