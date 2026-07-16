@@ -15,6 +15,6 @@ module.exports = {
     SUDO: process.env.SUDO || '',
     DB_NAME: process.env.DB_NAME || 'movie-xx-free',
     LANG: process.env.LANG || 'SI',
-    OWNER_NUMBER: process.env.OWNER_NUMBER || '94716769285',
+    OWNER_NUMBER: process.env.OWNER_NUMBER || '94711726564',
     GITHUB_TOKEN: process.env.GITHUB_TOKEN || '',
 };
