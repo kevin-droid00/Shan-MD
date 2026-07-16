@@ -17,7 +17,7 @@ cmd({
 ┃ 👤 User: ${pushname}
 ┃ 🕒 Runtime: ${botRuntime}
 ┃ 👑 Owner: ${config.OWNER_NUMBER || "Not Set"}
-┃ 🤖 Version: 1.0.0
+┃ 🤖 Version: 3.0.0
 ╰━━━━━━━━━━━━━━━━━━⬣
 
 ╭━━━〔 📥 DOWNLOAD COMMANDS 〕━━⬣
