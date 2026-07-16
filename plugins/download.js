@@ -32,7 +32,7 @@ const {
     cmd,
     commands
 } = require('../command')
-const { getFbVideoInfo } =  require("fb-downloader-scrapper")
+const { getFbVideoInfo } =  require("fb-SHAN-scrapper")
 const https = require('https');
 let wm = config.FOOTER
 let newsize = config.MAX_SIZE * 1024 * 1024
@@ -94,8 +94,8 @@ async(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, isGroup, sen
 try{
   if (!q) return await  reply('*Please give me googledrive url !!*')   
 let res = await fg.gdrive(q.replace('https://drive.usercontent.google.com/download?id=', 'https://drive.google.com/file/d/').replace('&export=download' , '/view'))
-reply(`*🗃️ SHAN GDRIVE DOWNLODER 🗃️* \n\n*📃 File name:*  ${res.fileName}
-*💈 File Size:* ${res.fileSize}
+reply(`*🗃️ 𝚂𝙷𝙰𝙽 𝙶𝙳𝚁𝙸𝚅𝙴 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 🗃️* \n\n*📃 📂 𝙵𝚒𝚕𝚎 𝙽𝚊𝚖𝚎:*  ${res.fileName}
+*💈 ⚖️ 𝙵𝚒𝚕𝚎 𝚂𝚒𝚣𝚎:* ${res.fileSize}
 *🕹️ File type:* ${res.mimetype}
 
 ${config.FOOTER}`)		
@@ -264,12 +264,12 @@ async(conn, mek, m, {
     const wm = config.FOOTER;
 
  
-  let caption = `*🎶SHAN SONG DOWNLODER🎶*
+  let caption = `*🎶𝚂𝙷𝙰𝙽 𝚂𝙾𝙽𝙶 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁🎶*
 
-*☘️ Title :* *${result.title}*
-*👁️ Views :* *${result.views}*
-*⏰ Duration :* *${result.duration}*
-*💃 Url :* *${result.url}*`;
+*☘️ 📌 𝚃𝚒𝚝𝚕𝚎 :* *${result.title}*
+*👁️ 👁️ 𝚅𝚒𝚎𝚠𝚜 :* *${result.views}*
+*⏰ ⌚ 𝙳𝚞𝚛𝚊𝚝𝚒𝚘𝚗 :* *${result.duration}*
+*💃 🔗 𝚄𝚛𝚕 :* *${result.url}*`;
 	  
 
     const buttons = [
@@ -336,6 +336,7 @@ cmd({
         }
 
         await conn.sendMessage(from, { react: { text: '⬆️', key: mek.key } });
+k.key } });
 
         await conn.sendMessage(
             from,
@@ -367,6 +368,7 @@ async (conn, mek, m, { from, q, reply }) => {
     if (!prog?.result?.download) throw new Error('No download URL');
 
     await conn.sendMessage(from, { react: { text: '⬆️', key: mek.key } });
+k.key } });
 
     // තාවකාලික file names
     const inputPath = `./temp_${Date.now()}.mp3`;
@@ -438,6 +440,7 @@ async (conn, mek, m, { from, q, reply }) => {
 
         // --- Send audio file ---
         await conn.sendMessage(from, { react: { text: '⬆️', key: mek.key } });
+k.key } });
 
         await conn.sendMessage(
             from,
@@ -475,7 +478,7 @@ try {
 	await conn.sendMessage(from, { react: { text: '⬆️', key: mek.key } });
 	const up_mg =  await conn.sendMessage(from, { text : `*Uploading request ..⬆️*` }, {quoted: mek} )
            
-	await conn.sendMessage(from, { audio:{ url: q }, caption: config.FOOTER , mimetype: 'audio/mpeg' , caption: wm, fileName: `test.mp3` });
+	await conn.sendMessage(from, { audio:{ url: q }, caption: wm, mimetype: 'audio/mpeg', fileName: `test.mp3` });
         await conn.sendMessage(from, { delete: up_mg.key })
 	await conn.sendMessage(from, { react: { text: '✔️', key: mek.key } });
 } catch (e) {
@@ -503,13 +506,13 @@ try{
 
 const mov = await fetchJson(`https://darksadasyt-tiktokdl.vercel.app/api/tiktok?q=${q}`)
 
-let caption = `*🪺 SHAN TIK TOK DOWNLODER 🪺*
+let caption = `*🪺 𝚂𝙷𝙰𝙽 𝚃𝙸𝙺 𝚃𝙾𝙺 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 🪺*
 
 *┌──────────────────*
-*├ 🎩 Title :* ${mov.title}
-*├ 🎃 Region :* ${mov.regions}
-*├ ⏰ Duration :* ${mov.runtime}
-*├ 🔗 Url :* ${q}
+*├ 🎩 📌 𝚃𝚒𝚝𝚕𝚎 :* ${mov.title}
+*├ 🎃 🌍 𝚁𝚎𝚐𝚒𝚘𝚗 :* ${mov.regions}
+*├ ⏰ ⌚ 𝙳𝚞𝚛𝚊𝚝𝚒𝚘𝚗 :* ${mov.runtime}
+*├ 🔗 🔗 𝚄𝚛𝚕 :* ${q}
 *└──────────────────*
 ${config.FOOTER}
 `
@@ -588,7 +591,8 @@ cmd({
 async(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
 
-await conn.sendMessage(from, { react: { text: '⬆️', key: mek.key } });	
+await conn.sendMessage(from, { react: { text: '⬆️', key: mek.key } });
+
 conn.sendMessage(from, { video: { url: q }, mimetype: "video/mp4", caption: `${config.FOOTER}` }, { quoted: mek })
   await conn.sendMessage(from, { react: { text: `✔️`, key: mek.key } })
 } catch (e) {
@@ -607,7 +611,8 @@ cmd({
 async(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
 
-await conn.sendMessage(from, { react: { text: '⬆️', key: mek.key } });	
+await conn.sendMessage(from, { react: { text: '⬆️', key: mek.key } });
+
 conn.sendMessage(from, { video: { url: q }, mimetype: "video/mp4", caption: `${config.FOOTER}` }, { quoted: mek })
   await conn.sendMessage(from, { react: { text: `✔️`, key: mek.key } })
 } catch (e) {
@@ -627,6 +632,7 @@ async(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, isGroup, sen
 try{
 
 	await conn.sendMessage(from, { react: { text: '⬆️', key: mek.key } });
+k.key } });
 conn.sendMessage(from, { audio: { url: q }, mimetype: "audio/mpeg", caption: `${config.FOOTER}` }, { quoted: mek })
   await conn.sendMessage(from, { react: { text: `✔️`, key: mek.key } })
 } catch (e) {
@@ -646,6 +652,7 @@ cmd({
 async(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
 await conn.sendMessage(from, { react: { text: '⬆️', key: mek.key } });
+k.key } });
 conn.sendMessage(from, { audio: { url: q }, mimetype: "audio/mpeg", caption: `${config.FOOTER}` }, { quoted: mek })
   await conn.sendMessage(from, { react: { text: `✔️`, key: mek.key } })
 } catch (e) {
@@ -706,7 +713,7 @@ cmd({
         const duration = 'Unknown'; // Not available in new API
         const title = data.title || 'Facebook video';
 
-        const caption = `*🏮 SHAN FB DOWNLOADER 🏮*
+        const caption = `*🏮 SHAN FB SHAN 🏮*
          *┌──────────────────*
          *├ 🐼 Title:* ${title}
          *├ ⏱️ Duration:* ${duration}
@@ -865,7 +872,7 @@ return await conn.buttonMessage(from, buttonMessage, mek)
 
 }
 } catch (e) {
-   reply('🚫 *Error Accurated !!*\n\n' + e )
+   reply('🚫 *Error Occurred !!*\n\n' + e )
 console.log(e)
 }
 })
@@ -983,7 +990,7 @@ try {
     await conn.sendMessage(from, { 
         video: { url: downloadUrl }, 
         mimetype: "video/mp4", 
-        caption: "*💃 SHAN IG DOWNLODER 💃*\n\n" + config.FOOTER 
+        caption: "*💃 𝚂𝙷𝙰𝙽 𝙸𝙶 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 💃*\n\n" + config.FOOTER 
     }, { quoted: mek });
 
     m.react('✔️');
@@ -1064,13 +1071,13 @@ async(conn, mek, m,{from, q, reply}) => {
     const data = await download(q)
     if (!data || !data.dllink) return reply("❌ APK not found!")
 
-    let listdata = `*🗃️ SHAN APK DOWNLOADER 🗃️*
+    let listdata = `*🗃️ SHAN APK SHAN 🗃️*
 
 *┌──────────────────╮*
 *├ 📚 Name :* ${data.name}
-*├ 📦 Package :* ${data.package}
-*├ ⬆️ Last update :* ${data.lastup}
-*├ 📥 Size :* ${data.size}
+*├ 📦 📦 𝙿𝚊𝚌𝚔𝚊𝚐𝚎 :* ${data.package}
+*├ ⬆️ 🆙 𝙻𝚊𝚜𝚝 𝚄𝚙𝚍𝚊𝚝𝚎 :* ${data.lastup}
+*├ 📥 ⚖️ 𝚂𝚒𝚣𝚎 :* ${data.size}
 *└──────────────────╯*
 
 ${config.FOOTER}`
@@ -1114,11 +1121,11 @@ try{
     var results = await yts(url);
     let wm = config.FOOTER
     var result = results.videos[0]
-     let caption = `*🎥 SHAN VIDEO DOWNLODER 🎥*
+     let caption = `*🎥 𝚂𝙷𝙰𝙽 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 🎥*
 *┌─────────────────────┐*
-*├ 📹 Title : ${result.title}* 
-*├ 🐼 Views : ${result.views}*
-*├ ⌛Duration : ${result.duration}*
+*├ 📹 📌 𝚃𝚒𝚝𝚕𝚎 : ${result.title}* 
+*├ 🐼 👁️ 𝚅𝚒𝚎𝚠𝚜 : ${result.views}*
+*├ ⌛⌚ 𝙳𝚞𝚛𝚊𝚝𝚒𝚘𝚗 : ${result.duration}*
 *├ 📎 URL : ${result.url}*
 *└─────────────────────┘*`
 const sections = [
@@ -1280,6 +1287,7 @@ async (conn, mek, m, { from, q, reply }) => {
 
         // React with upload emoji
         await conn.sendMessage(from, { react: { text: '⬆️', key: mek.key } });
+k.key } });
 
         // Send video as document
         await conn.sendMessage(from, {
@@ -1330,6 +1338,7 @@ async (conn, mek, m, { from, q, reply }) => {
 
         // React with upload emoji
         await conn.sendMessage(from, { react: { text: '⬆️', key: mek.key } });
+k.key } });
 
         // Send video as document
         await conn.sendMessage(from, {
@@ -1381,6 +1390,7 @@ async (conn, mek, m, { from, q, reply }) => {
 
         // React with upload emoji
         await conn.sendMessage(from, { react: { text: '⬆️', key: mek.key } });
+k.key } });
 
         // Send video as document
         await conn.sendMessage(from, {
@@ -1429,6 +1439,7 @@ try {
 
         // React with upload emoji
         await conn.sendMessage(from, { react: { text: '⬆️', key: mek.key } });
+k.key } });
 
         // Send video as document
         await conn.sendMessage(from, {
@@ -1475,6 +1486,7 @@ try {
 
         // React with upload emoji
         await conn.sendMessage(from, { react: { text: '⬆️', key: mek.key } });
+k.key } });
 
         // Send video as document
         await conn.sendMessage(from, {
@@ -1524,6 +1536,7 @@ try {
 
         // React with upload emoji
         await conn.sendMessage(from, { react: { text: '⬆️', key: mek.key } });
+k.key } });
 
         // Send video as document
         await conn.sendMessage(from, {
@@ -1561,6 +1574,7 @@ async (conn, mek, m, { from, q, reply }) => {
         const videoUrl = res.result.download;
 
         await conn.sendMessage(from, { react: { text: '⬆️', key: mek.key } });
+k.key } });
 
         await conn.sendMessage(from, {
             video: { url: videoUrl },
@@ -1594,6 +1608,7 @@ cmd({
         const videoUrl = res.result.download;
 
         await conn.sendMessage(from, { react: { text: '⬆️', key: mek.key } });
+k.key } });
 
         await conn.sendMessage(from, {
             video: { url: videoUrl },
@@ -1626,6 +1641,7 @@ cmd({
         const videoUrl = res.result.download;
 
         await conn.sendMessage(from, { react: { text: '⬆️', key: mek.key } });
+k.key } });
 
         await conn.sendMessage(from, {
             video: { url: videoUrl },
@@ -1656,6 +1672,7 @@ cmd({
         const videoUrl = res.result.download;
 
         await conn.sendMessage(from, { react: { text: '⬆️', key: mek.key } });
+k.key } });
 
         await conn.sendMessage(from, {
             video: { url: videoUrl },
@@ -1687,6 +1704,7 @@ cmd({
         const videoUrl = res.result.download;
 
         await conn.sendMessage(from, { react: { text: '⬆️', key: mek.key } });
+k.key } });
 
         await conn.sendMessage(from, {
             video: { url: videoUrl },
@@ -1719,6 +1737,7 @@ cmd({
         const videoUrl = res.result.download;
 
         await conn.sendMessage(from, { react: { text: '⬆️', key: mek.key } });
+k.key } });
 
         await conn.sendMessage(from, {
             video: { url: videoUrl },
@@ -1749,12 +1768,12 @@ try{
 await conn.sendMessage(from, { react: { text: '⬇️', key: mek.key }})
 if(!q) return await conn.sendMessage(from , { text: '*🔥 Enter mediafire link...*' }, { quoted: mek } ) 
 const data = await fetchJson(`https://mfire-dl.vercel.app/mfire?url=${q}`)
-let listdata = `*🔥SHAN MEDIAFIRE DOWNLODER 🔥*
+let listdata = `*🔥SHAN MEDIAFIRE DOWNLOADER 🔥*
 
 *┌──────────────────╮*
 *├ 🔥 Name :* ${data.fileName}
 *├ ⏩ Type :* ${data.fileType}
-*├ 📁 Size :* ${data.size}
+*├ 📁 ⚖️ 𝚂𝚒𝚣𝚎 :* ${data.size}
 *├ 📅 Date :* ${data.date}
 *└──────────────────╯*\n ${config.FOOTER}`
 
@@ -1834,7 +1853,7 @@ for (var i = 0; i < res.result.length; i++) {
 srh.push({
 title: res.result[i].title,
 description: '',
-rowId: prefix + `xnxxdown ${res.result[i].link}}`
+rowId: prefix + `xnxxdown ${res.result[i].link}`
 });
 }
 
@@ -1978,7 +1997,7 @@ for (var i = 0; i < res.length; i++) {
 srh.push({
 title: res[i].title,
 description: '',
-rowId: prefix + `phinfo ${res[i].link}}`
+rowId: prefix + `phinfo ${res[i].link}`
 });
 }
 
@@ -2006,19 +2025,19 @@ await conn.listMessage(from, listMessage,mek)
 cmd({
     pattern: "phinfo",	
     react: '🔞',
-     //desc: "moive downloader",
+     //desc: "moive SHAN",
     filename: __filename
 },
 async (conn, m, mek, { from, q, isMe, prefix, reply }) => {
 try{
 
 let res = await fetchJson(`https://ph-slow-dl.vercel.app/api/analyze?q=${q}`)
-let msg = `*\`🔞 SHAN PRONHUB DOWNLOADER🔞\`*
+let msg = `*\`🔞 𝚂𝙷𝙰𝙽 𝙿𝙾𝚁𝙽𝙷𝚄𝙱 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 🔞\`*
 
 *┌──────────────────*
 *├ \`❄️ Title\` :* ${res.video_title}
 *├ \`⏱️ Time\` :* ${res.analyze_time}
-*├ \`🧐 Uploder\` :* ${res.video_uploader}
+*├ \`🧐 Uploader\` :* ${res.video_uploader}
 *├ \`🔗 Url\` :* ${q}
 *└──────────────────*`
 
@@ -2078,9 +2097,10 @@ const datas = q.split("±")[1]
  
 
 	await conn.sendMessage(from, { react: { text: '⬆️', key: mek.key } });
+k.key } });
 	
            
-	await conn.sendMessage(from, { document:{ url: datas }, caption: config.FOOTER , mimetype: 'video/mp4' , caption: wm, fileName: `${title}` }, { quoted: mek });
+	await conn.sendMessage(from, { document:{ url: datas }, caption: wm, mimetype: 'video/mp4', fileName: `${title}` }, { quoted: mek });
 	await conn.sendMessage(from, { react: { text: '✔️', key: mek.key } });
 } catch (e) {
 	       console.log(e)
@@ -2159,9 +2179,9 @@ async (conn, mek, m, { from, prefix, l, quoted, body, isCmd, command, args, q, i
         let caption = `*\`🎼 SHAN 🅂🄿🄾🅃🄸🄵🅈 🄳🄾🅆🄽🄻🄾🄰🄳🄴🅁 🎼\`*
 *┌──────────────────╮*
 *├ \`🎶 Title:\`* ${data.title}
-*├ \`🧑‍🎤 Artist:\`* ${data.artist}
-*├ \`💽 Album:\`* ${data.album}
-*├ \`📅 Date:\`* ${data.releaseDate}
+*├ \`🧑‍🎤 🧑‍🎤 𝙰𝚛𝚝𝚒𝚜𝚝:\`* ${data.artist}
+*├ \`💽 💽 𝙰𝚕𝚋𝚞𝚖:\`* ${data.album}
+*├ \`📅 📅 𝙳𝚊𝚝𝚎:\`* ${data.releaseDate}
 *├ \`🔗 URL:\`* ${q}
 *└──────────────────╯*`;
 
@@ -2210,6 +2230,7 @@ cmd({
 		
 
 await conn.sendMessage(from, { react: { text: '⬆️', key: mek.key } });
+k.key } });
 		    
 		        
                 await conn.sendMessage(from, { audio: { url: q }, mimetype: 'audio/mpeg' }, { quoted: mek });
@@ -2246,9 +2267,10 @@ const datas = q.split("&")[1]
 
 	
 	await conn.sendMessage(from, { react: { text: '⬆️', key: mek.key } });
+k.key } });
 	
            
-	await conn.sendMessage(from, { document:{ url: datae }, jpegThumbnail: resizedBotImg, caption: config.FOOTER , mimetype: 'audio/mpeg' , caption: wm, fileName: `${title}` }, { quoted: mek });
+	await conn.sendMessage(from, { document:{ url: datae }, jpegThumbnail: resizedBotImg, caption: wm, mimetype: 'audio/mpeg', fileName: `${title}` }, { quoted: mek });
 	await conn.sendMessage(from, { react: { text: '✔️', key: mek.key } });
 } catch (e) {
 	       console.log(e)
@@ -2332,7 +2354,7 @@ async (conn, mek, m, { from, prefix, q, reply }) => {
             return await reply('⚠️ Failed to retrieve valid song data. Please check your query or try again later.');
         }
 
-        const caption = `*\`🎼 SHANSOUNDCLOUD DOWNLOADER 🎼\`*\n\n*🎶 Title:* ${data.title}\n*🔗 URL:* ${q}`;
+        const caption = `*\`🎼 SHANSOUNDCLOUD SHAN 🎼\`*\n\n*🎶 Title:* ${data.title}\n*🔗 URL:* ${q}`;
 
         const buttons = [
             {
