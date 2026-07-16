@@ -6,10 +6,11 @@ function convertToBool(text, fault = 'true') {
 
 //gg
 module.exports = {
-SESSION_ID:'zB9TECrY#ZHlZPZDJZiIvMRIhkt-flzLq7b87eCOusOls8NKPgcA', // methanata oyage id eka daganna
+SESSION_ID: 'zB9TECrY#ZHlZPZDJZiIvMRIhkt-flzLq7b87eCOusOls8NKPgcA', // methanata oyage id eka daganna
 
+PREFIX: '.', // මෙතනට ඔයාට අවශ්‍ය prefix එක දාන්න පුළුවන් (උදා: '.', '!', '/')
 ANTI_DELETE: process.env.ANTI_DELETE === undefined ? 'true' : process.env.ANTI_DELETE, 
-MV_BLOCK: process.env. MV_BLOCK === undefined ? 'true' : process.env. MV_BLOCK,    
+MV_BLOCK: process.env.MV_BLOCK === undefined ? 'true' : process.env.MV_BLOCK,    
 ANTI_LINK: process.env.ANTI_LINK === undefined ? 'true' : process.env.ANTI_LINK, 
 SEEDR_MAIL: '',
 SEEDR_PASSWORD: '',
@@ -20,4 +21,5 @@ OWNER_NUMBER: '94711726564',
 LOGO: process.env.LOGO === undefined ? 'https://telegra.ph/file/38a4ba6f7a51c15f5feaf.jpg' : process.env.LOGO
 
 };
-//GITHUB_AUTH_TdOKEN: 'ouvnI0xSDsmfWA1filVxx.SZ0vJGYkjlC5VX54U0e10',
+//GITHUB_AUTH_TOKEN: 'ouvnI0xSDsmfWA1filVxx.SZ0vJGYkjlC5VX54U0e10',
+    
