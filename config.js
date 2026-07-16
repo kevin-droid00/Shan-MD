@@ -1,25 +1,20 @@
 const fs = require('fs');
 if (fs.existsSync('config.env')) require('dotenv').config({ path: './config.env' });
+
 function convertToBool(text, fault = 'true') {
     return text === fault ? true : false;
 }
 
-//gg
 module.exports = {
-SESSION_ID: process.env.SESSION_ID ||'LIdQnBLL#wcWWsFtPjUgtnr3q84vr9-JDspBLpda4PxUvmRfWMvk', // methanata oyage id eka daganna
-
-PREFIX: '.', // මෙතනට ඔයාට අවශ්‍ය prefix එක දාන්න පුළුවන් (උදා: '.', '!', '/')
-ANTI_DELETE: process.env.ANTI_DELETE === undefined ? 'true' : process.env.ANTI_DELETE, 
-MV_BLOCK: process.env.MV_BLOCK === undefined ? 'true' : process.env.MV_BLOCK,    
-ANTI_LINK: process.env.ANTI_LINK === undefined ? 'true' : process.env.ANTI_LINK, 
-SEEDR_MAIL: '',
-SEEDR_PASSWORD: '',
-SUDO: '',//
-DB_NAME: 'Shan',
-LANG: 'SI',
-OWNER_NUMBER: '94711726564',
-LOGO: process.env.LOGO === undefined ? 'https://files.catbox.moe/nsv9gv.jpg' : process.env.LOGO
-
+    SESSION_ID: process.env.SESSION_ID || '7JlhyL5I#Oy4Jg3E_fwPPicdwafWCS6oJos7nL0cUjJrtgo8i8e0',
+    ANTI_DELETE: process.env.ANTI_DELETE === undefined ? 'true' : process.env.ANTI_DELETE, 
+    MV_BLOCK: process.env.MV_BLOCK === undefined ? 'true' : process.env.MV_BLOCK,    
+    ANTI_LINK: process.env.ANTI_LINK === undefined ? 'true' : process.env.ANTI_LINK, 
+    SEEDR_MAIL: process.env.SEEDR_MAIL || '',
+    SEEDR_PASSWORD: process.env.SEEDR_PASSWORD || '',
+    SUDO: process.env.SUDO || '',
+    DB_NAME: process.env.DB_NAME || 'movie-xx-free',
+    LANG: process.env.LANG || 'SI',
+    OWNER_NUMBER: process.env.OWNER_NUMBER || '94716769285',
+    GITHUB_TOKEN: process.env.GITHUB_TOKEN || '',
 };
-//GITHUB_AUTH_TOKEN: 'ouvnI0xSDsmfWA1filVxx.SZ0vJGYkjlC5VX54U0e10',
-    
