@@ -18,7 +18,7 @@ SUDO: '',//
 DB_NAME: 'Shan',
 LANG: 'SI',
 OWNER_NUMBER: '94711726564',
-LOGO: process.env.LOGO === undefined ? 'https://telegra.ph/file/38a4ba6f7a51c15f5feaf.jpg' : process.env.LOGO
+LOGO: process.env.LOGO === undefined ? 'https://files.catbox.moe/nsv9gv.jpg' : process.env.LOGO
 
 };
 //GITHUB_AUTH_TOKEN: 'ouvnI0xSDsmfWA1filVxx.SZ0vJGYkjlC5VX54U0e10',
