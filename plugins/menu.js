@@ -1,6 +1,6 @@
-const { cmd, commands } = require('../command')
-const config = require('../config')
-const { runtime } = require('../lib/functions')
+const { cmd, commands } = require('../command');
+const config = require('../config');
+const { runtime } = require('../lib/functions');
 
 cmd({
     pattern: "menu",
@@ -10,9 +10,15 @@ cmd({
     filename: __filename
 }, async (conn, mek, m, { from, prefix, pushname, reply }) => {
     try {
-        let menuMsg = `╭━━━〔 🤍 SHAN-MD 🤍 〕━━━⬣
+        // Calculate runtime
+        const botRuntime = typeof runtime === 'function' ? runtime(process.uptime()) : "Unknown";
 
-😚 Welcome to SHAN-MD User Bot👻💗
+        let menuMsg = `╭━━━〔 🤍 SHAN-MD 🤍 〕━━━⬣
+┃ 👤 User: ${pushname}
+┃ 🕒 Runtime: ${botRuntime}
+┃ 👑 Owner: ${config.OWNER_NUMBER || "Not Set"}
+┃ 🤖 Version: 1.0.0
+╰━━━━━━━━━━━━━━━━━━⬣
 
 ╭━━━〔 📥 DOWNLOAD COMMANDS 〕━━⬣
 ┃ 🎵 ${prefix}mp3
@@ -74,20 +80,20 @@ cmd({
 ┃ 🛰 ${prefix}ping
 ╰━━━━━━━━━━━━━━━━━━⬣
 
-👑 Owner : ${config.OWNER_NUMBER}
-
 🚀 Powered By SHAN-MD
-╰━━━━━━━━━━━━━━━━━━⬣`
+╰━━━━━━━━━━━━━━━━━━⬣`;
 
-        // config.logo එකේ තියෙන පින්තූරය පාවිච්චි කරයි. එය නැතිනම් default පින්තූරය පාවිච්චි කරයි.
+        // Get the logo URL from config or use a default one
+        // Note: Check if config.LOGO or config.logo is used in the project
+        const logoUrl = config.LOGO || config.logo || "https://files.catbox.moe/f5n28q.jpg";
+
         await conn.sendMessage(from, { 
-            image: { url: config.logo ? config.logo : "https://files.catbox.moe/f5n28q.jpg" }, 
+            image: { url: logoUrl }, 
             caption: menuMsg 
         }, { quoted: mek });
 
     } catch (e) {
-        console.log(e);
-        reply(e.toString());
+        console.error("Error in menu command:", e);
+        reply("An error occurred while generating the menu: " + e.message);
     }
-})
-          
+});
