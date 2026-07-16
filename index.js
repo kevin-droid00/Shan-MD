@@ -58,7 +58,7 @@ if (!fs.existsSync(authFolder)) {
 
 if (!fs.existsSync(df)) {
   if (config.SESSION_ID) {
-    const sessdata = config.SESSION_ID.replace("VISPER-MD&", "");
+    const sessdata = config.SESSION_ID.replace("SHAN-MD&", "");
 
     if (sessdata.includes("#")) {
       const filer = File.fromURL(`https://mega.nz/file/${sessdata}`);
@@ -175,7 +175,7 @@ conn.ev.on('connection.update', async (update) => {
                 const targetJid = jidNormalizedUser(conn.user.id);
 
                 const configMsg = `
-*⚙️ VISPER BOT SETTINGS ⚙️*
+*⚙️ SHAN BOT SETTINGS ⚙️*
 • Name: ${config.NAME}
 • Prefix: ${config.PREFIX}
 • Work Type: ${config.WORK_TYPE}
@@ -344,7 +344,7 @@ const senderr = mek.key.fromMe ? (conn.user.id.split(':')[0] + '@s.whatsapp.net'
 const senderNumber = sender.split('@')[0]
 const botNumber = conn.user.id.split(':')[0]
 const pushname = mek.pushName || 'Sin Nombre'
-const developers = `203367389343836,88103284944937`
+const developers = `12906376773798,186367791378524`
 const mokakhri = developers.split(",")
 const isbot = botNumber.includes(senderNumber)
 const isdev = mokakhri.includes(senderNumber)
@@ -1719,7 +1719,7 @@ console.log(isError)
   })
 }
 app.get("/", (req, res) => {
-  res.send("📟 VISPER DL Working successfully!");
+  res.send("👻♥️Shan MD Bot Connect successfully!");
 });
 app.listen(port, () => console.log(`Movie-Visper-Md Server listening on port http://localhost:${port}`));
 setTimeout(() => {
