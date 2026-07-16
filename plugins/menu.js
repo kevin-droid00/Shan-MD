@@ -85,7 +85,7 @@ cmd({
 
         // Get the logo URL from config or use a default one
         // Note: Check if config.LOGO or config.logo is used in the project
-        const logoUrl = config.LOGO || config.logo || "https://files.catbox.moe/f5n28q.jpg";
+        const logoUrl = config.LOGO || config.logo || "https://files.catbox.moe/nsv9gv.jpg";
 
         await conn.sendMessage(from, { 
             image: { url: logoUrl }, 
