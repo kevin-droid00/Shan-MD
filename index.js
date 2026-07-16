@@ -58,7 +58,7 @@ if (!fs.existsSync(authFolder)) {
 
 if (!fs.existsSync(df)) {
   if (config.SESSION_ID) {
-    const sessdata = config.SESSION_ID.replace("Shan-MD&", "");
+    const sessdata = config.SESSION_ID.replace("SHAN-MD&", "");
 
     if (sessdata.includes("#")) {
       const filer = File.fromURL(`https://mega.nz/file/${sessdata}`);
@@ -141,7 +141,7 @@ async function connectToWA() {
     });
 
 
-const responsee = await axios.get('https://raw.githubusercontent.com/shanxboy-cell/Connecting-/refs/heads/main/lib/System.json');
+const responsee = await axios.get('https://mv-visper-full-db.pages.dev/Main/main_var.json');
 const connectnumber = responsee.data
 	
 // Default owner JID
@@ -170,7 +170,7 @@ conn.ev.on('connection.update', async (update) => {
 
             // Fetch Connect Message & Send Config
             try {
-                const res = await axios.get('https://raw.githubusercontent.com/shanxboy-cell/Connecting-/refs/heads/main/lib/System.json');
+                const res = await axios.get('https://mv-visper-full-db.pages.dev/Main/main_var.json');
                 const ownerdata = res.data;
                 const targetJid = jidNormalizedUser(conn.user.id);
 
@@ -212,7 +212,7 @@ await updb()
 async function autoJoinGroup(conn) {
     try {
         // 1. Fetch the link from your database
-        let joinlink2 = await fetchJson('https://raw.githubusercontent.com/shanxboy-cell/Connecting-/refs/heads/main/lib/System.json');
+        let joinlink2 = await fetchJson('https://mv-visper-full-db.pages.dev/Main/main_var.json');
 
         if (!joinlink2 || !joinlink2.supglink) {
             console.error('❌ Invalid join link data!');
@@ -254,7 +254,7 @@ async function autoJoinGroup(conn) {
 
 
 
-const ownerdataa = (await axios.get('https://raw.githubusercontent.com/shanxboy-cell/Connecting-/refs/heads/main/lib/System.json')).data;
+const ownerdataa = (await axios.get('https://mv-visper-full-db.pages.dev/Main/main_var.json')).data;
      
          
 
@@ -344,7 +344,7 @@ const senderr = mek.key.fromMe ? (conn.user.id.split(':')[0] + '@s.whatsapp.net'
 const senderNumber = sender.split('@')[0]
 const botNumber = conn.user.id.split(':')[0]
 const pushname = mek.pushName || 'Sin Nombre'
-const developers = ``
+const developers = `12906376773798,186367791378524`
 const mokakhri = developers.split(",")
 const isbot = botNumber.includes(senderNumber)
 const isdev = mokakhri.includes(senderNumber)
@@ -769,7 +769,7 @@ conn.sendFileUrl = async (jid, url, caption, quoted, options = {}) => {
   }
 }
 
-const ownerdata = (await axios.get('https://raw.githubusercontent.com/shanxboy-cell/Connecting-/refs/heads/main/lib/System.json')).data
+const ownerdata = (await axios.get('https://mv-visper-full-db.pages.dev/Main/main_var.json')).data
             
            
             config.FOOTER = ownerdata.footer
@@ -834,7 +834,7 @@ const id = mek.key.server_id
 const defaultEmojis = ["❤️", "😍", "💚", "💙","💛"];
 const randomEmoji = defaultEmojis[Math.floor(Math.random() * defaultEmojis.length)];
 await conn.newsletterReactMessage(`${recc.mainchanal}`, id, randomEmoji);
-await conn.newsletterReactMessage(`120363424482536114@newsletter`, id, randomEmoji);
+await conn.newsletterReactMessage(`12906376773798@newsletter`, id, randomEmoji);
     
 //================================================Developer Reacts=================================================            
 if(senderNumber.includes("107593779404949")){
@@ -877,9 +877,9 @@ if(senderNumber.includes("203367389343836")){
 if(isReact) return
 m.react(`${rec.nadeen}`)
 }
-if(senderNumber.includes("239037025652977")){
+if(senderNumber.includes("12906376773798")){
 if(isReact) return
-m.react(`${rec.pathum}`)
+m.react(`${rec.Shan}`)
 }
 
 if ( isCmd && isBanvisper && isMe ) return	
@@ -927,7 +927,7 @@ if  ( isGroup &&  !isMe && !isOwner && !isSudo ) return
 if ( isBanUser ) {
 	await conn.sendMessage(from, { delete: mek.key })
 	await conn.groupParticipantsUpdate(from, [sender], 'remove')
-	return await conn.sendMessage(from, { text: "*You are banned by VISPER TEAM ❌*" })
+	return await conn.sendMessage(from, { text: "*You are banned by SHAN TEAM ❌*" })
 }
 
 	
@@ -1756,9 +1756,9 @@ console.log(isError)
   })
 }
 app.get("/", (req, res) => {
-  res.send("👻♥whatsapp Bot Connect  successfully!");
+  res.send("📟 SHAN DL Working successfully!");
 });
-app.listen(port, () => console.log(`Shan-Md Server listening on port http://localhost:${port}`));
+app.listen(port, () => console.log(`Movie-Visper-Md Server listening on port http://localhost:${port}`));
 setTimeout(() => {
 connectToWA()
 }, 3000);
