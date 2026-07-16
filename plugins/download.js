@@ -94,7 +94,7 @@ async(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, isGroup, sen
 try{
   if (!q) return await  reply('*Please give me googledrive url !!*')   
 let res = await fg.gdrive(q.replace('https://drive.usercontent.google.com/download?id=', 'https://drive.google.com/file/d/').replace('&export=download' , '/view'))
-reply(`*🗃️ THARU GDRIVE DOWNLODER 🗃️* \n\n*📃 File name:*  ${res.fileName}
+reply(`*🗃️ SHAN GDRIVE DOWNLODER 🗃️* \n\n*📃 File name:*  ${res.fileName}
 *💈 File Size:* ${res.fileSize}
 *🕹️ File type:* ${res.mimetype}
 
@@ -264,7 +264,7 @@ async(conn, mek, m, {
     const wm = config.FOOTER;
 
  
-  let caption = `*🎶THARU SONG DOWNLODER🎶*
+  let caption = `*🎶SHAN SONG DOWNLODER🎶*
 
 *☘️ Title :* *${result.title}*
 *👁️ Views :* *${result.views}*
@@ -503,7 +503,7 @@ try{
 
 const mov = await fetchJson(`https://darksadasyt-tiktokdl.vercel.app/api/tiktok?q=${q}`)
 
-let caption = `*🪺 THARU TIK TOK DOWNLODER 🪺*
+let caption = `*🪺 SHAN TIK TOK DOWNLODER 🪺*
 
 *┌──────────────────*
 *├ 🎩 Title :* ${mov.title}
@@ -706,7 +706,7 @@ cmd({
         const duration = 'Unknown'; // Not available in new API
         const title = data.title || 'Facebook video';
 
-        const caption = `*🏮 VISPER FB DOWNLOADER 🏮*
+        const caption = `*🏮 SHAN FB DOWNLOADER 🏮*
          *┌──────────────────*
          *├ 🐼 Title:* ${title}
          *├ ⏱️ Duration:* ${duration}
@@ -983,7 +983,7 @@ try {
     await conn.sendMessage(from, { 
         video: { url: downloadUrl }, 
         mimetype: "video/mp4", 
-        caption: "*💃 THARU IG DOWNLODER 💃*\n\n" + config.FOOTER 
+        caption: "*💃 SHAN IG DOWNLODER 💃*\n\n" + config.FOOTER 
     }, { quoted: mek });
 
     m.react('✔️');
@@ -1064,7 +1064,7 @@ async(conn, mek, m,{from, q, reply}) => {
     const data = await download(q)
     if (!data || !data.dllink) return reply("❌ APK not found!")
 
-    let listdata = `*🗃️ THARU APK DOWNLOADER 🗃️*
+    let listdata = `*🗃️ SHAN APK DOWNLOADER 🗃️*
 
 *┌──────────────────╮*
 *├ 📚 Name :* ${data.name}
@@ -1114,7 +1114,7 @@ try{
     var results = await yts(url);
     let wm = config.FOOTER
     var result = results.videos[0]
-     let caption = `*🎥 THARU VIDEO DOWNLODER 🎥*
+     let caption = `*🎥 SHAN VIDEO DOWNLODER 🎥*
 *┌─────────────────────┐*
 *├ 📹 Title : ${result.title}* 
 *├ 🐼 Views : ${result.views}*
@@ -1749,7 +1749,7 @@ try{
 await conn.sendMessage(from, { react: { text: '⬇️', key: mek.key }})
 if(!q) return await conn.sendMessage(from , { text: '*🔥 Enter mediafire link...*' }, { quoted: mek } ) 
 const data = await fetchJson(`https://mfire-dl.vercel.app/mfire?url=${q}`)
-let listdata = `*🔥VISPER MEDIAFIRE DOWNLODER 🔥*
+let listdata = `*🔥SHAN MEDIAFIRE DOWNLODER 🔥*
 
 *┌──────────────────╮*
 *├ 🔥 Name :* ${data.fileName}
@@ -2013,7 +2013,7 @@ async (conn, m, mek, { from, q, isMe, prefix, reply }) => {
 try{
 
 let res = await fetchJson(`https://ph-slow-dl.vercel.app/api/analyze?q=${q}`)
-let msg = `*\`🔞 𝙑𝙄𝙎𝙋𝙀𝙍 𝙋𝙊𝙍𝙉𝙃𝙐𝘽 𝘿𝙊𝙒𝙉𝙇𝙊𝘼𝘿𝙀𝙍 🔞\`*
+let msg = `*\`🔞 SHAN PRONHUB DOWNLOADER🔞\`*
 
 *┌──────────────────*
 *├ \`❄️ Title\` :* ${res.video_title}
@@ -2156,7 +2156,7 @@ async (conn, mek, m, { from, prefix, l, quoted, body, isCmd, command, args, q, i
             return await reply("❌ Could not retrieve the song. Please check your query.");
         }
 
-        let caption = `*\`🎼 🅅🄸🅂🄿🄴🅁 🅂🄿🄾🅃🄸🄵🅈 🄳🄾🅆🄽🄻🄾🄰🄳🄴🅁 🎼\`*
+        let caption = `*\`🎼 SHAN 🅂🄿🄾🅃🄸🄵🅈 🄳🄾🅆🄽🄻🄾🄰🄳🄴🅁 🎼\`*
 *┌──────────────────╮*
 *├ \`🎶 Title:\`* ${data.title}
 *├ \`🧑‍🎤 Artist:\`* ${data.artist}
@@ -2332,7 +2332,7 @@ async (conn, mek, m, { from, prefix, q, reply }) => {
             return await reply('⚠️ Failed to retrieve valid song data. Please check your query or try again later.');
         }
 
-        const caption = `*\`🎼 VISPER SOUNDCLOUD DOWNLOADER 🎼\`*\n\n*🎶 Title:* ${data.title}\n*🔗 URL:* ${q}`;
+        const caption = `*\`🎼 SHANSOUNDCLOUD DOWNLOADER 🎼\`*\n\n*🎶 Title:* ${data.title}\n*🔗 URL:* ${q}`;
 
         const buttons = [
             {
