@@ -6,7 +6,7 @@ function convertToBool(text, fault = 'true') {
 
 //gg
 module.exports = {
-SESSION_ID: 'zB9TECrY#ZHlZPZDJZiIvMRIhkt-flzLq7b87eCOusOls8NKPgcA', // methanata oyage id eka daganna
+SESSION_ID: process.env.SESSION_ID ||'zB9TECrY#ZHlZPZDJZiIvMRIhkt-flzLq7b87eCOusOls8NKPgcA', // methanata oyage id eka daganna
 
 PREFIX: '.', // මෙතනට ඔයාට අවශ්‍ය prefix එක දාන්න පුළුවන් (උදා: '.', '!', '/')
 ANTI_DELETE: process.env.ANTI_DELETE === undefined ? 'true' : process.env.ANTI_DELETE, 
