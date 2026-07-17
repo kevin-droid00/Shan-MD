@@ -47,10 +47,6 @@ class MovieInfo {
 ▪ 🎬 DIRECTOR ➤ ${this.director}
 ▪ 🗣️ LANGUAGE ➤ ${this.language}
 
-➤➤➤➤➤➤➤➤➤➤➤ 🔗 JOIN
-μ➤➤ ${config.WHATSAPP_GROUP || 'https://chat.whatsapp.com/...'}
-➤➤➤➤➤➤➤➤➤➤➤
-
 ${config.FOOTER || '🎬 SHAN MOVIES 🎬'}`;
     }
 
